@@ -10,25 +10,17 @@
             string name = Console.ReadLine();
 
             Console.WriteLine();
-            Console.Write(frameChar);
+            string frameTop = frameChar.ToString();
 
-            for (int i = 0; i < name.Length; i++)
+            for (int i = 0; i <= name.Length; i++)
             {
-                Console.Write(frameChar);
+                frameTop += frameChar.ToString();
             }
 
-            Console.WriteLine(frameChar);
-            Console.Write(frameChar);
-            Console.Write(name);
-            Console.WriteLine(frameChar);
-            Console.Write(frameChar);
-
-            for (int i = 0; i < name.Length; i++)
-            {
-                Console.Write(frameChar);
-            }
-
-            Console.WriteLine(frameChar);
+            string frameBottom = frameTop;
+            Console.WriteLine(frameTop);
+            Console.WriteLine($"{frameChar}{name}{frameChar}");
+            Console.WriteLine(frameBottom);
             Console.ReadKey();
         }
     }
